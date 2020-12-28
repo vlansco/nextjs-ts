@@ -16,7 +16,7 @@ const ResetPage = () => {
   )
 }
 
-export const getServerSideProps = storeWrapper.getServerSideProps(
+export const getStaticProps = storeWrapper.getServerSideProps(
   async ({ store }) => {
     store.dispatch(reset)
   }
