@@ -1,3 +1,4 @@
+// @ts-ignore
 import { shallow } from 'enzyme'
 import { Counter } from './Counter'
 

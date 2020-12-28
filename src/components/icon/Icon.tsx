@@ -1,24 +1,22 @@
 import * as React from 'react'
 import * as icons from './icons'
-import styles from './icon.module.scss'
 
 export type Icons = typeof icons
 export type IconName = keyof Icons
-export type IconSize = 'small' | 'medium' | 'large'
 
 interface IconProps {
   name: IconName
-  size?: IconSize
+  style?: string
 }
 
 /**
  * Icon
  */
-export const Icon: React.SFC<IconProps> = ({ name, size = 'small' }) => {
+export const Icon: React.SFC<IconProps> = ({ name, style = 'justify-center h-10 w-10 rounded-lg bg-indigo-500 text-white' }) => {
   const { viewBox, id } = icons[name]
   return (
-    <span className={`${styles.icon} ${styles[`icon--${size}`]}`}>
-      <svg viewBox={viewBox}>
+    <span className={`${style}`}>
+      <svg viewBox={viewBox} className="h-4 w-4">
         <use xlinkHref={`#${id}`} href={`#${id}`} />
       </svg>
     </span>

@@ -5,25 +5,8 @@ const {
 
 const getBuildConfig = () => {
   const path = require('path')
-  const postcssPresetEnv = require('postcss-preset-env')
-  const postcssPresetEnvOptions = {
-    features: {
-      'custom-media-queries': true,
-      'custom-selectors': true,
-    },
-  }
 
-  const cssOptions = {
-    postcssLoaderOptions: {
-      plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
-    },
-    sassOptions: {
-      includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
-    },
-  }
-
-  const nextConfig = {
-    ...cssOptions,
+  return {
     webpack(config) {
       config.module.rules.push({
         test: /\.svg$/,
@@ -46,11 +29,10 @@ const getBuildConfig = () => {
       return config
     },
   }
-  return nextConfig
 }
 
-module.exports = (phase) => {
+module.exports = (phase, { defaultConfig }) => {
   const shouldAddBuildConfig =
     phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD
-  return shouldAddBuildConfig ? getBuildConfig() : {}
+  return shouldAddBuildConfig ? getBuildConfig() : defaultConfig
 }
