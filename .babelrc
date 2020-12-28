@@ -3,6 +3,7 @@
     "development": {
       "presets": ["next/babel"],
       "plugins": [
+        "macros",
         [
           "module-resolver",
           {
@@ -20,6 +21,7 @@
     "production": {
       "presets": ["next/babel"],
       "plugins": [
+        "macros",
         [
           "module-resolver",
           {
@@ -43,9 +45,10 @@
               "modules": "commonjs"
             }
           }
-        ],
+        ]
       ],
       "plugins": [
+        "macros",
         [
           "module-resolver",
           {
