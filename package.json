@@ -26,9 +26,6 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run lint:ts"
-    ],
-    "*.scss": [
-      "npm run lint:scss"
     ]
   },
   "keywords": [

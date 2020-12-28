@@ -1,13 +1,7 @@
-import {
-  createStore,
-  applyMiddleware,
-  combineReducers,
-  AnyAction,
-  Reducer,
-} from 'redux'
+import { AnyAction, applyMiddleware, combineReducers, createStore, Reducer } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
-import { createWrapper, MakeStore, HYDRATE } from 'next-redux-wrapper'
+import { createWrapper, HYDRATE, MakeStore } from 'next-redux-wrapper'
 
 import { counterReducer, CounterState } from './counter/counterReducer'
 
@@ -24,11 +18,10 @@ const reducer: Reducer<AppState, AnyAction> = (state, action) => {
      * Implement state preservation as needed.
      * see: https://github.com/kirill-konshin/next-redux-wrapper#server-and-client-state-separation
      */
-    const nextState = {
+    return {
       ...state,
       ...action.payload,
     }
-    return nextState
   }
   return combinedReducers(state, action)
 }
