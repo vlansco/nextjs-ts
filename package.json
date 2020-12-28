@@ -9,8 +9,9 @@
     "start": "NODE_ENV=production PORT=$PORT next start",
     "build": "NODE_ENV=production rm -rf .next && next build",
     "dev": "next dev",
+    "dev:vercel": "vercel dev",
     "export": "NODE_ENV=production next build && next export",
-    "serve-exported": " ws --spa -d ./out",
+    "export:serve": "ws --spa -d ./out",
     "prettier": "prettier  --write **/*.{ts,tsx,js}",
     "lint:ts": "yarn run prettier && tslint -c tslint.json -t stylish --fix {pages,src,server}/**/*.{ts,tsx}",
     "lint:types": "tsc -p . --noEmit"
