@@ -7,6 +7,7 @@ A bit altered version of the [opinionated boilerplate](https://github.com/sanjay
 - React 17
 - Custom Document and App
 - Redux with `react-redux` and `redux-thunk`
+- i18n lightweight solution with [next-localization](https://github.com/StarpTech/next-localization) by [StarpTech](https://github.com/StarpTech)
 - Type safety using TypeScript in strict mode
 - Tailwind CSS with PostCSS
 - SVG sprite for icons
