@@ -1,0 +1,18 @@
+{
+    "intro": {
+        "hello": "Bonjour le monde!",
+        "welcome": "Bienvenue, {{username}}!",
+        "text": "On espère vous trouvez ça util.",
+        "description": "Cet exemple montre comment changer la langue des pages optimisées SSG et SSR."
+    },
+    "dashboard": {
+        "description": "Cet exemple montre comment charger la langue côté client paresseusement."
+    },
+    "warning": "ATTENTION: {{birds}}",
+    "birds": {
+        "other": "Oiseaux",
+        "one": "Oiseau",
+        "two": "deux Oiseaux",
+        "few": "quelques Oiseaux"
+    }
+}
