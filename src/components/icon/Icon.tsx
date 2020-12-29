@@ -6,13 +6,13 @@ export type IconName = keyof Icons
 
 interface IconProps {
   name: IconName
-  style?: string
+  style: string
 }
 
 /**
  * Icon
  */
-export const Icon: React.SFC<IconProps> = ({ name, style = '' }) => {
+export const Icon: React.FC<IconProps> = ({ name, style = '' }) => {
   const { viewBox, id } = icons[name]
   return (
       <svg viewBox={viewBox} className={`${style}`} fill="currentColor">
