@@ -18,7 +18,9 @@ const CustomApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     // @ts-ignore
     <I18nProvider lngDict={lngDict} locale={router.locale}>
-      <Component {...rest} />
+      <div className="mx-2 mt-1">
+        <Component {...rest} />
+      </div>
     </I18nProvider>
   )
 }

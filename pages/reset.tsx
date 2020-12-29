@@ -9,7 +9,9 @@ const ResetPage = () => {
   return (
     <main>
       <Link href={'/'}>
-        <a>back</a>
+        <a className="text-gray-400 underline font-light text-2xl">
+          {'< back'}
+        </a>
       </Link>
       <HomepageCounter />
     </main>

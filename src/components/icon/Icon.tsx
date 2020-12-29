@@ -12,13 +12,11 @@ interface IconProps {
 /**
  * Icon
  */
-export const Icon: React.SFC<IconProps> = ({ name, style = 'justify-center h-10 w-10 rounded-lg bg-indigo-500 text-white' }) => {
+export const Icon: React.SFC<IconProps> = ({ name, style = '' }) => {
   const { viewBox, id } = icons[name]
   return (
-    <span className={`${style}`}>
-      <svg viewBox={viewBox} className="h-4 w-4">
+      <svg viewBox={viewBox} className={`${style}`} fill="currentColor">
         <use xlinkHref={`#${id}`} href={`#${id}`} />
       </svg>
-    </span>
   )
 }

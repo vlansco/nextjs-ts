@@ -14,27 +14,26 @@ const FooPage = () => {
 
   return (
     <main>
-      <h1>{i18n.t('intro.hello')}</h1>
-      <h3>{i18n.t('intro.description')}</h3>
-      <div>Current locale: {router.locale}</div>
-      <div>Pluralization: {tp('warning', { birds: 2 })}</div>
+      <div>
+        <p className="text-3xl font-sans font-black">{i18n.t('intro.hello')}</p>
+        <p className="text-2xl  font-sans font-extralight">{i18n.t('intro.description')}</p>
+        <div className="my-2 text-2xl font-light">Current locale: <span className="text-indigo-600">{router.locale}</span></div>
+        <div className="my-2 text-2xl font-light">Pluralization: <span className="text-indigo-600">{tp('warning', { birds: 2 })}</span></div>
+      </div>
+      <div className="flex flex-row space-x-2 my-5">
+        <Link href={'/'}>
+          <button className="btn-blue">Back to Home</button>
+        </Link>
 
-      <Link href={'/reset'}>
-        <a>reset page</a>
-      </Link>
-      <div>
+        <Link href={'/reset'}>
+          <button className="btn-blue">Goto Reset page</button>
+        </Link>
+
         <Link href="/foo" locale="en">
-          <a>Change language to (en)</a>
+          <button className="btn-green">Goto (en) version</button>
         </Link>
-      </div>
-      <div>
         <Link href="/foo" locale="fr">
-          <a>Change language to (fr)</a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/">
-          <a>Back to root</a>
+          <button className={"btn-green"}>Goto (fr) version</button>
         </Link>
       </div>
       <HomepageCounter />
