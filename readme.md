@@ -1,9 +1,8 @@
 # NextJS Boilerplate
 
-An opinionated boilerplate to kickstart projects using NextJS
+A bit altered version of the [opinionated boilerplate](https://github.com/sanjaytwisk/nextjs-ts) to kickstart projects using NextJS
 
-**Features**
-
+### Features
 - Next 10
 - React 17
 - Custom Document and App
@@ -109,3 +108,5 @@ import HomepageCounter from '@containers/counter/HomepageCounter'
 import { CounterAction } from '@store/counter/counterActions'
 ```
 
+## Credits
+- [Sanjay Twisk](https://github.com/sanjaytwisk) for the original code of the [Opinionated Next JS project boilerplate with TypeScript and Redux](https://github.com/sanjaytwisk/nextjs-ts)
