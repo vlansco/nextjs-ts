@@ -32,7 +32,9 @@ const HomePage = () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const { default: lngDict = {} } = await import(`../locales/${locale}.json`)
+  const { default: lngDict = {} } = await import(
+    `../src/locales/${locale}.json`
+  )
 
   return {
     props: { lngDict },
